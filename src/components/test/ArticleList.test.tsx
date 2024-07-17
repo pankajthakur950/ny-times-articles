@@ -26,6 +26,7 @@ describe('ArticleList Component', () => {
   beforeEach(() => {
     (useNavigate as jest.Mock).mockClear();
     (useFetchData as jest.Mock).mockClear();
+    (getArticlesList as jest.Mock).mockClear();
   });
 
   it('renders loading skeleton when data is loading', () => {

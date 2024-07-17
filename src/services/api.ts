@@ -14,15 +14,10 @@ const axiosInstance = axios.create({
 });
 
 export async function get(url: string) {
-    try {
-        const response = await axiosInstance.get(url, {
-            params: {
-                "api-key": API_KEY
-            }
-        });
-        return response;
-    } catch (error) {
-        throw error;
-    }
-}
-
+    const response = await axiosInstance.get(url, {
+        params: {
+            "api-key": API_KEY
+        }
+    });
+    return response;
+} 

@@ -18,4 +18,4 @@ export const useFetchData = <T>(
         queryFn: fetchFn
       });
     return {data, isLoading, isError};
-}
+};

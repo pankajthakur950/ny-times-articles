@@ -26,7 +26,7 @@ function ArticleList() {
                 navigate(`/detail/${articleId}`, { state: { article: clickedArticle } });
             }
         }
-    }
+    };
 
     return (
         <div>
@@ -50,7 +50,7 @@ function ArticleList() {
                     items?.map((item: Article) => {
                         return (
                             <ArticleItem key={item.id} item={item} />
-                        )
+                        );
                     })
                 }
             </div>

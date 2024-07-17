@@ -1,5 +1,5 @@
-import React from 'react'
-import { Article } from '../interfaces/Article'
+import React from 'react';
+import { Article } from '../interfaces/Article';
 
 function ArticleItem({ item }: { item: Article }) {
   return (
@@ -18,7 +18,7 @@ function ArticleItem({ item }: { item: Article }) {
         <span className='text-right w-2/3 '>{item.byline}</span>
       </div>
     </div>
-  )
+  );
 }
 
-export default ArticleItem
+export default ArticleItem;

@@ -25,8 +25,6 @@ describe('Testing useFetchData hook', () => {
       isError: false,
     });
 
-    const fetchKey = ['articles'];
-
     const { result } = renderHook(() =>
       useFetchData(()=>{}, ['articles'])
     );

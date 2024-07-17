@@ -30,7 +30,7 @@ const RadioButtonPills = <T extends { toString(): string }>({ name, options, sel
           <input
             type="radio"
             id={optionValue}
-            name="radioPills"
+            name={name}
             value={option.toString()}
             checked={selectedOption === option.value}
             onChange={() => handleSelect(option.value)}
@@ -38,7 +38,7 @@ const RadioButtonPills = <T extends { toString(): string }>({ name, options, sel
           />
           <label htmlFor={optionValue}>{option.text}</label>
         </div>
-      )})}
+      );})}
     </div>
   );
 };

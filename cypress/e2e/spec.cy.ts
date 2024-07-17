@@ -1,6 +1,6 @@
 describe('Testing the Article List page', () => {
   beforeEach(()=>{
-    cy.visit('http://localhost:3000/')
+    cy.visit('http://localhost:3000/');
   });
   
   it('should load the articles on load of the page', () => {
@@ -13,4 +13,4 @@ describe('Testing the Article List page', () => {
     elm.click();
     cy.url().should('contain', 'detail');
   });
-})
+});
