@@ -29,3 +29,9 @@ Your app is ready to be deployed!
 ### `npm run eslint`
 
 List out all the linting error in the project as per the eslint configuration.
+
+### ` npm run e2e`
+
+Open the cypress application to run the E2E test cases
+Click on E2E test cases to run the configured test cases & then choose the browser of choice
+Click on listed specin the opened browser to execute the tests

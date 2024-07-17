@@ -22,6 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage",
+    "e2e":"cypress open",
     "eject": "react-scripts eject",
     "eslint": "npx eslint --ext .js,.jsx,.ts,.tsx src"
   },
