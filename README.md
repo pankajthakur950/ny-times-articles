@@ -3,17 +3,17 @@
 The NY Times Most Popular Articles Viewer is a web application built using React that interacts with the NY Times Most Popular Articles API. It fetches and displays a list of articles based on the most viewed section, allowing users to view detailed information about each article when clicked.
 
 ### Features
-`Fetch Articles`: Utilizes the NY Times Most Popular Articles API to fetch data based on a specified period (1, 7, or 30 days).
-`Display List`: Shows a list of articles with basic information such as title, author, and publication date.
-`View Details`: Clicking on an article in the list displays detailed information including the full article content.
+`Fetch Articles`: Utilizes the NY Times Most Popular Articles API to fetch data based on a specified period (1, 7, or 30 days).\
+`Display List`: Shows a list of articles with basic information such as title, author, and publication date.\
+`View Details`: Clicking on an article in the list displays detailed information including the full article content.\
 `Responsive Design`: Ensures the application is usable across different screen sizes.
 
 ### Technologies Used
-`React`: JavaScript library for building user interfaces.
-`Jest and React Testing Library`: Testing frameworks for unit testing React components.
-`Cypress`: Tools for UI testing and automation.
-`GitHub`: Version control and collaboration platform.
-`NY Times Articles API`: External API for fetching article data.
+`React`: JavaScript library for building user interfaces.\
+`Jest and React Testing Library`: Testing frameworks for unit testing React components.\
+`Cypress`: Tools for E2E testing.\
+`GitHub`: Version control and collaboration platform.\
+`NY Times Articles API`: External API for fetching article data.\
 
 ## Available Scripts
 
@@ -53,6 +53,6 @@ List out all the linting error in the project as per the eslint configuration.
 
 ### ` npm run e2e`
 
-Open the cypress application to run the E2E test cases
-Click on E2E test cases to run the configured test cases & then choose the browser of choice
+Open the cypress application to run the E2E test cases.\
+Click on E2E test cases to run the configured test cases & then choose the browser of choice.\
 Click on listed specin the opened browser to execute the tests
