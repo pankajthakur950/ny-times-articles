@@ -6,7 +6,7 @@ export const getArticlesList = async (days = 1) => {
     const url = Endpoints.getArticles(days);
     const response = await get(url);
 
-    const result: Article[] = response?.data?.results.map((item: { id: string; title: string; abstract: string; byline: string; url: string; published_date: string; media: { [x: string]: ImageInfo[]; }[]; }) => {
+    const result: Article[] = response?.data?.results.map((item: { id: string; title: string; abstract: string; byline: string; url: string; org_facet: string[]; published_date: string; media: { [x: string]: ImageInfo[]; }[]; }) => {
         return {
             id: item.id,
             title: item.title,
@@ -14,6 +14,7 @@ export const getArticlesList = async (days = 1) => {
             byline: item.byline,
             url: item.url,
             publishedDate: new Date(item.published_date).toLocaleDateString(),
+            organizationFacets: item.org_facet,
             image: {
                 caption: item.media[0]?.caption,
                 metadata: item.media[0]?.["media-metadata"].map((data) => {

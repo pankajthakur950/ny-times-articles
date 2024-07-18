@@ -16,5 +16,6 @@ export interface Article{
     abstract: string;
     byline: string;
     publishedDate: string;
+    organizationFacets?: string[];
     image?: ArticleImage
 }

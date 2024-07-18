@@ -5,7 +5,9 @@ function ArticleItem({ item }: { item: Article }) {
   return (
     <div className='article_item' data-article={item.id}>
       <div className='flex gap-4'>
-        <img className="h-16 w-16" src={item?.image?.metadata?.[0].url}/>
+        <img className="h-16 w-16" 
+            src={item?.image?.metadata?.[0].url} 
+            alt={item?.image?.caption}/>
         <div className='flex flex-col gap-2'>
           <h3 className='font-satoshi text-lg font-semibold text-gray-900 leading-2 flex gap-3 justify-between'>
             {item.title}
