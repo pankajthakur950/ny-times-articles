@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { MemoryRouter, Route, Routes, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import ArticleDetail from '../ArticleDetail';
 import { Article } from '../../interfaces/Article';
 
