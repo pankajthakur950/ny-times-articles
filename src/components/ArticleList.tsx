@@ -13,9 +13,21 @@ function ArticleList() {
     const [daysData, setDaysData] = useState(ArticleTimeLine.Day);
     const { data: items, isLoading, isError } = useFetchData<Article[]>(() => getArticlesList(daysData), [`articles-${daysData}`]);
 
-    {/* TODO: handle API failure UI*/}
-    if (isError) return <p>Error fetching data</p>;
+    if (isError) {
+        return (
+            <div aria-live="polite">
+                <p>Error fetching data. Please try again later.</p>
+                <button onClick={() => window.location.reload()}>Retry</button>
+            </div>
+        );
+    }
 
+    /**
+     * Handles the click event on an article item.
+     * Retrieves the article ID from the clicked element's data attribute 
+     * and navigates to the article detail page.
+     * @param {React.MouseEvent<HTMLDivElement, MouseEvent>} e - The click event object.
+     */
     const onArticleItemClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         const targetElement = e.target as HTMLDivElement;
         if (targetElement.classList.contains('article_item')) {
@@ -42,7 +54,10 @@ function ArticleList() {
                     onChange={(value: ArticleTimeLine) => { setDaysData(value); }}
                 />
             </div>
-            <div data-testid="articles" className='articles-container' onClick={onArticleItemClick}>
+            <div data-testid="articles" 
+                role="list"
+                className='articles-container' 
+                onClick={onArticleItemClick}>
                 {
                     isLoading && <ListSkeleton count={8} />
                 }
