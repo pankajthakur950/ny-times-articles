@@ -2,13 +2,28 @@
 
 The NY Times Most Popular Articles Viewer is a web application built using React that interacts with the NY Times Most Popular Articles API. It fetches and displays a list of articles based on the most viewed section, allowing users to view detailed information about each article when clicked.
 
-### Features
+## Features
 `Fetch Articles`: Utilizes the NY Times Most Popular Articles API to fetch data based on a specified period (1, 7, or 30 days).\
 `Display List`: Shows a list of articles with basic information such as title, author, and publication date.\
 `View Details`: Clicking on an article in the list displays detailed information including the full article content.\
 `Responsive Design`: Ensures the application is usable across different screen sizes.
 
-### Technologies Used
+## Main Components
+`ArticleList`: Component to fetch data from API & manage application state & UI.
+`ArticleItem`: Component to render each article.
+`ArticleDetail`: Component to render detail of article.
+`Skeleton`: Reusable component to show skeleton loader.
+`RadioButtonPills`: Wrapper component on radio button group to show each radio item as pill.
+ 
+## Project Structure
+    * src/: Contains all source code files.\
+        - components/: React components organized based on functionality.\
+        - services/: Handles API calls and data fetching logic.\
+        - hooks/: Custom hooks created to manage common logic in application.\
+        - interfaces/: Interface used in the application.\
+        - tests/: Stores unit tests for components and utilities.\
+
+## Technologies Used
 `React`: JavaScript library for building user interfaces.\
 `Jest and React Testing Library`: Testing frameworks for unit testing React components.\
 `Cypress`: Tools for E2E testing.\
